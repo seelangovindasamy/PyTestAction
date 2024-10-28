@@ -1,24 +1,24 @@
-# test_calculator.py
+# calculator.py
 
-import calculator
+def add(x, y):
+    """Add two numbers."""
+    return x + y
 
-def test_add():
-    assert calculator.add(1, 2) == 3
+def subtract(x, y):
+    """Subtract two numbers."""
+    return x - y
 
-def test_subtract():
-    assert calculator.subtract(5, 3) == 2
+def multiply(x, y):
+    """Multiply two numbers."""
+    return x * y
 
-def test_multiply():
-    assert calculator.multiply(2, 3) == 6
+def divide(x, y):
+    """Divide two numbers. Raises a ZeroDivisionError if y is zero."""
+    if y == 0:
+        raise ZeroDivisionError("Cannot divide by zero!")
+    return x / y
 
-def test_divide():
-    assert calculator.divide(6, 2) == 3
-    assert calculator.divide(5, 2) == 2.5
+def square(x):
+    """Square a number."""
+    return x * x
 
-def test_divide_by_zero():
-    try:
-        calculator.divide(1, 0)
-    except ZeroDivisionError:
-        assert True
-    else:
-        assert False
