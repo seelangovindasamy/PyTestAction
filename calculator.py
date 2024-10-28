@@ -1,13 +1,23 @@
-from calculator import square
+# calculator.py
 
-def test_positive():
-    assert square(2) == 4
-    assert square(3) == 9
+def add(x, y):
+    """Add two numbers."""
+    return x + y
 
-def test_negative():
-    assert square(-2) == 4
-    assert square(-3) == 9
+def subtract(x, y):
+    """Subtract two numbers."""
+    return x - y
 
-def test_negative():
-    assert square(0) == 0
-    
+def multiply(x, y):
+    """Multiply two numbers."""
+    return x * y
+
+def divide(x, y):
+    """Divide two numbers. Raises a ZeroDivisionError if y is zero."""
+    if y == 0:
+        raise ZeroDivisionError("Cannot divide by zero!")
+    return x / y
+
+def square(x):
+    """Square a number."""
+    return x * x
